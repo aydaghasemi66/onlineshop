@@ -1,3 +1,6 @@
+{% load static %}
+
+
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
@@ -6,45 +9,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>قالب فروشگاهی روبیک مارکت</title>
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="assets/plugins/aos-master/dist/aos.css">
-    <link rel="stylesheet" href="assets/plugins/hover-master/css/hover-min.css">
-    <link rel="stylesheet" href="assets/css/ionicons.css">
-    <link rel="stylesheet" href="assets/css/droopmenu.css">
-    <link rel="stylesheet" href="assets/css/highlight.css">
-    <link rel="stylesheet" href="assets/css/nouislider.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.rtl.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/plugins/aos-master/dist/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/plugins/hover-master/css/hover-min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/ionicons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/droopmenu.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/highlight.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/nouislider.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <!-- /CSS Styles -->
 </head>
 <body>
 <!-- Header -->
 <section id="header">
-    <!-- Top NavBar -->
-    <div id="top-nav">
-        <div class="container">
-            <div class="row">
-                <div class="col-8 d-none d-md-block">
-                    <ul>
-                        <li><a href="./index.html">صفحه نخست</a></li>
-                        <li><a href="./about.html">درباره ما</a></li>
-                        <li><a href="./contact.html">تماس با ما</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-4 text-center text-md-end" id="top-support-info">
-                    <span>تلفن مشاوره و فروش: 09351234567</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /Top NavBar -->
     <!-- Search NavBar -->
     <div id="search-nav">
         <div class="container pt-1">
             <div class="row py-3 align-content-center">
                 <div class="col-12 col-md-3 col-xl-2 text-center text-md-start pb-2" id="header-logo">
                     <a href="./index.html">
-                        <img src="assets/images/logo.png" alt=""> روبیک مارکت
+                        <img src="{% static 'assets/images/logo.png' %}" alt=""> روبیک مارکت
                     </a>
                 </div>
                 <div class="col-12 col-md-5 col-xl-6">
@@ -121,7 +106,7 @@
                                                                         <li><a href="products.html">بازی کامپیوتری</a></li>
                                                                     </ul>
                                                                     <ul class="droopmenu-col droopmenu-col4 d-none d-lg-inline-block">
-                                                                        <li><img src="assets/images/megamenu/megamenu-image1.png" alt=""></li>
+                                                                        <li><img src="{% static 'assets/images/megamenu/megamenu-image1.png' %}" alt=""></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -154,7 +139,7 @@
                                                                         <li><a href="./products.html">لوازم دکوری</a></li>
                                                                     </ul>
                                                                     <ul class="droopmenu-col droopmenu-col4 d-none d-lg-inline-block">
-                                                                        <li><img src="assets/images/megamenu/megamenu-image2.png" alt=""></li>
+                                                                        <li><img src="{% static 'assets/images/megamenu/megamenu-image2.png' %}" alt=""></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -189,7 +174,7 @@
                                                                         <li><a href="products.html">لباس زیر</a></li>
                                                                     </ul>
                                                                     <ul class="droopmenu-col droopmenu-col4 d-none d-lg-inline-block">
-                                                                        <li><img src="assets/images/megamenu/megamenu-image3.png" alt=""></li>
+                                                                        <li><img src="{% static 'assets/images/megamenu/megamenu-image3.png' %}" alt=""></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -226,7 +211,7 @@
                                                                         <li><a href="./products.html">خاتم و منبت</a></li>
                                                                     </ul>
                                                                     <ul class="droopmenu-col droopmenu-col4 d-none d-lg-inline-block">
-                                                                        <li><img src="assets/images/megamenu/megamenu-image4.png" alt=""></li>
+                                                                        <li><img src="{% static 'assets/images/megamenu/megamenu-image4.png' %}" alt=""></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -261,7 +246,7 @@
                                                                         <li><a href="products.html">آیسان</a></li>
                                                                     </ul>
                                                                     <ul class="droopmenu-col droopmenu-col4 d-none d-lg-inline-block">
-                                                                        <li><img src="assets/images/megamenu/megamenu-image5.png" alt=""></li>
+                                                                        <li><img src="{% static 'assets/images/megamenu/megamenu-image5.png' %}" alt=""></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -292,7 +277,7 @@
                                                                         <li><a href="./products.html">سایر</a></li>
                                                                     </ul>
                                                                     <ul class="droopmenu-col droopmenu-col4 d-none d-lg-inline-block">
-                                                                        <li><img src="assets/images/megamenu/megamenu-image6.png" alt=""></li>
+                                                                        <li><img src="{% static 'assets/images/megamenu/megamenu-image6.png' %}" alt=""></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -362,53 +347,11 @@
 </section>
 <!-- /Header -->
 
-<section class="inner-page" id="contact-page">
-    <div class="container-fluid" id="page-hero">
-        <div class="row">
-            <div class="col-12">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 px-0">
-                            <h1>بازیابی رمز عبور</h1>
-                            <p>رمز عبور خود را بازیابی کنید.</p>
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="./index.html">صفحه نخست</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">بازیابی رمز عبور</li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="container py-2 py-md-5">
-        <div class="row">
-            <div class="col-12 col-sm-10 offset-sm-1">
-                <div class="content">
-                    <div class="row">
-                        <div class="col-12 col-lg-5 text-center">
-                            <img src="assets/images/reset-password.png" alt="">
-                        </div>
-                        <div class="col-12 col-lg-7 pt-5 pt-md-0 align-self-center">
-                            <div class="title">بازیابی رمز</div>
-                            <p>برای بازیابی رمز عبور، پست الکترونیک خود را وارد کنید.</p>
-                            <div class="form-group">
-                                <label for="email">پست الکترونیک :</label>
-                                <input type="email" class="form-control" id="email">
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" value="ارسال لینک بازیابی رمز عبور" class="btn btn-success">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{% block 'content' %}
+
+{% endblock 'content' %}
+
 
 <!-- Footer -->
 <section class="pt-4 pb-3" id="footer">
@@ -450,7 +393,7 @@
             </div>
             <div class="col-12 col-md-12 col-lg-6">
                 <hr class="d-lg-none">
-                <img src="assets/images/logo.png" alt=""> روبیک مارکت
+                <img src="{% static 'assets/images/logo.png' %}" alt=""> روبیک مارکت
                 <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
                 <div class="row">
                     <div class="col-12 col-md-6 text-center p-2" id="support-info">
@@ -461,13 +404,13 @@
                     <div class="col-12 col-md-6 pt-2 pt-md-0" id="certificates">
                         <div class="row">
                             <div class="col-4 text-center">
-                                <a href="#"><img src="assets/images/certificates/enamad.png" alt=""></a>
+                                <a href="#"><img src="{% static 'assets/images/certificates/enamad.png' %}" alt=""></a>
                             </div>
                             <div class="col-4 text-center">
-                                <a href="#"><img src="assets/images/certificates/samandehi.png" alt=""></a>
+                                <a href="#"><img src="{% static 'assets/images/certificates/samandehi.png' %}" alt=""></a>
                             </div>
                             <div class="col-4 text-center">
-                                <a href="#"><img src="assets/images/certificates/etehadiye.png" alt=""></a>
+                                <a href="#"><img src="{% static 'assets/images/certificates/etehadiye.png' %}" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -484,11 +427,11 @@
         <div class="row">
             <div class="col-12 col-sm-6" id="social-links">
                 <span>ما را دنبال کنید</span>
-                <a href="#"><img src="assets/images/social/insta.png" alt=""></a>
-                <a href="#"><img src="assets/images/social/facebook.png" alt=""></a>
-                <a href="#"><img src="assets/images/social/linkedin.png" alt=""></a>
-                <a href="#"><img src="assets/images/social/twitter.png" alt=""></a>
-                <a href="#"><img src="assets/images/social/youtube.png" alt=""></a>
+                <a href="#"><img src="{% static 'assets/images/social/insta.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'assets/images/social/facebook.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'assets/images/social/linkedin.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'assets/images/social/twitter.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'assets/images/social/youtube.png' %}" alt=""></a>
             </div>
             <div class="col-12 col-sm-6 text-sm-end pt-2 pt-sm-0">
                 <span>کلیه حقوق و مادی معنوی محفوط است.</span>
@@ -499,14 +442,14 @@
 <!-- Copyright -->
 
 <!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/plugins/fontawesome/js/all.min.js"></script>
-<script src="assets/plugins/aos-master/dist/aos.js"></script>
-<script src="assets/js/droopmenu.js"></script>
-<script src="assets/js/nouislider.min.js"></script>
-<script src="assets/js/pagination.js"></script>
-<script src="assets/js/scripts.js"></script>
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/plugins/fontawesome/js/all.min.js' %}"></script>
+<script src="{% static 'assets/plugins/aos-master/dist/aos.js' %}"></script>
+<script src="{% static 'assets/js/droopmenu.js' %}"></script>
+<script src="{% static 'assets/js/nouislider.min.js' %}"></script>
+<script src="{% static 'assets/js/pagination.js' %}"></script>
+<script src="{% static 'assets/js/scripts.js' %}"></script>
 <!-- /Scripts -->
 </body>
 </html>

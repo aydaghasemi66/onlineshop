@@ -1,0 +1,63 @@
+{% extends "inherit/base.html" %}
+{% load static %}
+{% block 'content' %}
+
+<section class="inner-page" id="contact-page">
+    <div class="container-fluid" id="page-hero">
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <h1>صفحه مورد نظر یافت نشد!</h1>
+                            <p>صفحه مورد نظر شما حذف شده یا اصلا وجود نداشته است!</p>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="./index.html">صفحه نخست</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">خطای 404</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="notfound">
+                                <div class="notfound-bg">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="notfound">
+                                    <div class="notfound-404">
+                                        <h1>404</h1>
+                                    </div>
+                                    <h2>صفحه مورد نظر یافت نشد!</h2>
+                                    <p>احتمالا صفحه مورد نظر شما حذف یا تغییر نام داده شده است.</p>
+                                    <a href="./index.html">بازگشت به صفحه اصلی</a>
+                                    <div class="notfound-social">
+                                        <a href="#"><img src="assets/images/social/twitter.png" alt="توئیتر" width="18px"></a>
+                                        <a href="#"><img src="assets/images/social/insta.png" alt="اینستاگرام" width="18px"></a>
+                                        <a href="#"><img src="assets/images/social/linkedin.png" alt="لینکدین" width="18px"></a>
+                                        <a href="#"><img src="assets/images/social/facebook.png" alt="فیس بوک" width="18px"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock 'content' %}
