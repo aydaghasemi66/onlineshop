@@ -11,6 +11,8 @@
                         <div class="col-12 px-0">
                             <h1>ورود به ناحیه کاربری</h1>
                             <p>وارد ناحیه کاربری خود در روبیک مارکت شوید.</p>
+                            {% load socialaccount %}
+                            <a href="{% provider_login_url 'google' %}?next=/" class="btn btn-primary">ورود با گوگل</a>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="./index.html">صفحه نخست</a></li>

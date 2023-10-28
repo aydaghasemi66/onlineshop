@@ -41,8 +41,10 @@
                 <div class="col-12 col-md-4">
                     <div class="row">
                         <div class="col-12 col-md-7 col-lg-6 text-center" id="btn-login-register">
-                            <a href="./login.html">ورود</a> /
+                            <a href="">ورود</a> /
                             <a href="./register.html">عضویت</a>
+                            {% load socialaccount %}
+                            <a href="{% provider_login_url 'google' %}?next=/">ورود با گوگل</a>
                         </div>
                         <div class="col-12 col-md-5 col-lg-6">
                             <a href="./cart.html">
