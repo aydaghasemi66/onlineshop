@@ -1,0 +1,258 @@
+{% extends "inherit/base.html" %}
+{% load static %}
+{% block 'content' %}
+
+
+<section class="inner-page" id="profile-page">
+    <div class="container-fluid" id="page-hero">
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <h1>ناحیه کاربری</h1>
+                            <p>به ناحیه کاربری روبیک مارکت خوش آمدید.</p>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="../index.html">صفحه نخست</a></li>
+                                    <li class="breadcrumb-item"><a href="#">ناحیه کاربری</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">ویرایش پروفایل</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-12 col-lg-3">
+                            <!-- Side Panel -->
+                            <div class="accordion" id="side-panel">
+                                <div class="accordion-item menu-container">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                            <span class="row">
+                                                <span class="col-3 col-sm-2 col-lg-3">
+                                                    <img src="{% static 'assets/images/user-no-image.jpg' %}" class="rounded-circle">
+                                                </span>
+                                                <span class="col-7 col-sm-8 col-lg-7 pt-0 pt-sm-2 pt-md-3 pt-lg-0 align-self-center">
+                                                    <div id="full-name">مصطفی کلانتری</div>
+                                                    <div class="mt-2" id="email-mobile">09351234567</div>
+                                                </span>
+                                            </span>
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="personal-info.html" class="active">
+                                                        <div>
+                                                            <div class="icon d-inline-block"><img src="{% static 'assets/images/icons/profile-menu/profile.webp' %}" class="pl-2"></div> اطلاعات حساب
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="factors.html">
+                                                        <div>
+                                                            <div class="icon d-inline-block"><img src="{% static 'assets/images/icons/profile-menu/orders.webp' %}" class="pl-2"></div> سفارش های من
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="favorites.html">
+                                                        <div>
+                                                            <div class="icon d-inline-block"><img src="{% static 'assets/images/icons/profile-menu/favorites.webp' %}" class="pl-2"></div> علاقه مندی ها
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li><hr></li>
+                                                <li>
+                                                    <a href="{% url 'accounts:logout' %}">
+                                                        <div>
+                                                            <div class="icon d-inline-block"><img src="{% static 'assets/images/icons/profile-menu/exit.webp' %}" class="pl-2"></div> خروج از حساب
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Side Panel -->
+                        </div>
+                        <div class="col-12 col-lg-9 pl-lg-0 pr-lg-2 mt-2 mt-lg-0">
+                            <!-- Profile Fields -->
+                            <div class="custom-container bg-light" id="profile-fields">
+                                <div class="row pt-2 px-3 ">
+                                    <div class="col-12"><h1>اطلاعات شخصی</h1></div>
+                                </div>
+                                <hr>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 profile-field py-2">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <div class="title">نام و نام خانوادگی</div>
+                                                    <div class="value">مصطفی کلانتری</div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="float-left" data-toggle="modal" data-target="#fullNameModal"><i class="fa fa-edit"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 profile-field py-2">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <div class="title">کدملی</div>
+                                                    <div class="value">1234567890</div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="float-left" data-toggle="modal" data-target="#nationalCodeModal"><i class="fa fa-edit"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 profile-field py-2">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <div class="title">شماره تلفن همراه</div>
+                                                    <div class="value">09351234567</div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="float-left" data-toggle="modal" data-target="#mobileModal"><i class="fa fa-edit"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 profile-field py-2">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <div class="title">تلفن ثابت</div>
+                                                    <div class="value">02112345678</div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="float-left" data-toggle="modal" data-target="#telModal"><i class="fa fa-edit"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 profile-field py-2">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <div class="title">پست الکترونیک</div>
+                                                    <div class="value">email@website.com</div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="float-left" data-toggle="modal" data-target="#emailModal"><i class="fa fa-edit"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 profile-field py-2">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <div class="title">تاریخ تولد</div>
+                                                    <div class="value">1372/01/01</div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="float-left" data-toggle="modal" data-target="#birthdayModal"><i class="fa fa-edit"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 profile-field py-2">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <div class="title">شماره کارت جهت مرجوع وجه</div>
+                                                    <div class="value" dir="ltr">1234-4321-1234-4321</div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="float-left" data-toggle="modal" data-target="#cardNumberModal"><i class="fa fa-edit"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 profile-field py-2">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <div class="title">رمز عبور</div>
+                                                    <div class="value">******</div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="float-left" data-toggle="modal" data-target="#passwordModal"><i class="fa fa-edit"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Profile Fields -->
+
+                            <!-- Latest Orders -->
+                            <div class="mt-2 order">
+                                <div class="row pt-2 px-3">
+                                    <div class="col-12"><h2>آخرین سفارش ها</h2></div>
+                                </div>
+                            </div>
+                            <div class="custom-container mt-2 order">
+                                <div class="row pt-2 px-3">
+                                    <div class="col-12 col-sm-6"><h2>سفارش شماره #1234</h2></div>
+                                    <div class="col-12 col-sm-6 text-sm-end"><span>20 مرداد 1400</span> - <span>پرداخت شده</span></div>
+                                </div>
+                                <hr>
+                                <div class="container">
+                                    <div class="row py-2">
+                                        <div class="col-12">
+                                            <div>
+                                                <div class="header">
+                                                    <div class="total py-1"><span>مبلغ کل:</span> 3.000.000 تومان</div>
+                                                </div>
+                                                <div class="container products px-0">
+                                                    <div class="row">
+                                                        <!-- Order Record -->
+                                                        <span class="col-12 col-sm-6 col-lg-4 col-xl-3 px-1">
+                                                            <a href="../product.html" target="_blank">
+                                                                <div class="product-box">
+                                                                    <div class="image" style="background-image: url('{% static 'assets/images/products/p100.png' %}')"></div>
+                                                                    <div class="text-center px-1 px-sm-3">
+                                                                        <h2>گوشی موبایل سامسونگ مدل Galaxy A21s</h2>
+                                                                        <div class="number">تعداد: 1 عدد</div>
+                                                                        <div class="price">مبلغ: 3.000.000 عدد</div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </span>
+                                                        <!-- /Order Record -->
+                                                        <!-- Order Record -->
+                                                        <span class="col-12 col-sm-6 col-lg-4 col-xl-3 px-1">
+                                                            <a href="../product.html" target="_blank">
+                                                                <div class="product-box">
+                                                                    <div class="image" style="background-image: url('{% static 'assets/images/products/p100.png' %}')"></div>
+                                                                    <div class="text-center px-1 px-sm-3">
+                                                                        <h2>گوشی موبایل سامسونگ مدل Galaxy A21s</h2>
+                                                                        <div class="number">تعداد: 1 عدد</div>
+                                                                        <div class="price">مبلغ: 3.000.000 عدد</div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </span>
+                                                        <!-- /Order Record -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Latest Orders -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock 'content' %}

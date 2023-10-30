@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'root',
     'accounts',
     'blog',
+    'stores',
+    'captcha',
     #django-allauth
     'allauth',
     'allauth.account',
@@ -52,13 +54,15 @@ SITE_ID = 2
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [
-            "profile",
-            "email",
+            'email',
+            'profile',
         ],
-        "AUTH_PARAMS": {
-            "access_type": "online",
+        'AUTH_PARAMS': {
+            'access_type': 'online',
         }
-                }}
+    }
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -89,6 +93,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
+
 
 
 # Database
@@ -155,3 +160,5 @@ AUTHENTICATION_BACKENDS = [
 ]
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL='/'
+
+AUTH_USER_MODEL = 'accounts.CustomeUser'

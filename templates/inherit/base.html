@@ -38,19 +38,27 @@
                         <input type="text" placeholder="جستجو کنید...">
                     </div>
                 </div>
+
                 <div class="col-12 col-md-4">
+                    {% if request.user.is_authenticated %}
+                    خوش اومدی! {{request.user.name}}
+                    <a href={% url 'password_change' %}>تغییر رمزعبور</a>
+                    <div class="col-12 col-md-5 col-lg-6">
+                        <a href="./cart.html">
+                            <div class="btn btn-warning w-100"><i class="fa fa-shopping-cart"></i>&nbsp;<span class="d-md-none d-lg-inline-block">سبد خرید</span> (2)</div>
+                        </a>
+                    </div>
+                    {% else %}
                     <div class="row">
                         <div class="col-12 col-md-7 col-lg-6 text-center" id="btn-login-register">
-                            <a href="">ورود</a> /
-                            <a href="./register.html">عضویت</a>
-                            {% load socialaccount %}
-                            <a href="{% provider_login_url 'google' %}?next=/">ورود با گوگل</a>
+                            <a href="{% url 'accounts:login' %}">ورود</a> /
+
+                            <a href="{% url 'accounts:signup' %}">عضویت</a>
+                            
                         </div>
-                        <div class="col-12 col-md-5 col-lg-6">
-                            <a href="./cart.html">
-                                <div class="btn btn-warning w-100"><i class="fa fa-shopping-cart"></i>&nbsp;<span class="d-md-none d-lg-inline-block">سبد خرید</span> (2)</div>
-                            </a>
-                        </div>
+                        {% endif %}
+
+
                     </div>
                 </div>
             </div>
@@ -327,7 +335,7 @@
                                             <li class="droopmenu-parent" aria-haspopup="true">
                                                 <a href="profile/personal-info.html" aria-expanded="false">پروفایل کاربری<em class="droopmenu-topanim"></em></a><div class="dm-arrow"></div>
                                                 <ul style="">
-                                                    <li><a href="profile/personal-info.html">مشخصات کاربری</a></li>
+                                                    <li><a href="{% url 'root:personal-info' %}">مشخصات کاربری</a></li>
                                                     <li><a href="profile/factors.html">سفارشات</a></li>
                                                     <li><a href="profile/factor-view.html">مشاهده فاکتور</a></li>
                                                     <li><a href="profile/addresses.html">آدرس ها</a></li>

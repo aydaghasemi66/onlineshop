@@ -9,14 +9,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 px-0">
-                            <h1>ورود به ناحیه کاربری</h1>
-                            <p>وارد ناحیه کاربری خود در روبیک مارکت شوید.</p>
-                            {% load socialaccount %}
-                            <a href="{% provider_login_url 'google' %}?next=/" class="btn btn-primary">ورود با گوگل</a>
+                            <h1>عضویت در سایت</h1>
+                            <p>با عضویت در سایت از همه امکانات روبیک مارکت بهره مند شوید.</p>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="./index.html">صفحه نخست</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">ورود</li>
+                                    <li class="breadcrumb-item"><a href="/">صفحه نخست</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">عضویت</li>
                                 </ol>
                             </nav>
                         </div>
@@ -35,18 +33,30 @@
                             <img src="{% static 'assets/images/login.png' %}" alt="">
                         </div>
                         <div class="col-12 col-lg-7 pt-5 pt-md-0 align-self-center">
-                            <div class="title">وارد شوید</div>
-                            <p>با عضویت در سایت از همه امکانات سایت بهره مند شوید.</p>
+                            <div class="title">عضویت در روبیک مارکت</div>
+                            <p>با ورود به ناحیه کاربری خود از همه امکانات سایت بهره مند شوید.</p>
+                            <div class="form-group">
+                                <label for="name">نام و نام خانوادگی :</label>
+                                <input type="text" class="form-control" id="name" requierd>
+                            </div>
                             <div class="form-group">
                                 <label for="email">پست الکترونیک :</label>
-                                <input type="email" class="form-control" id="email">
+                                <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="form-group">
                                 <label for="password">رمز عبور :</label>
-                                <input type="password" class="form-control" id="password">
+
+                                <input type="password" class="form-control" id="password1" name="password1" required>
                             </div>
                             <div class="form-group">
-                                <a href="profile/personal-info.html"><input type="submit" value="ورود به ناحیه کاربری" class="btn btn-success"></a>
+                                <label for="password">تکرار رمز عبور :</label>
+
+                                <input type="password" class="form-control" id="password1" name="password2" required>
+                            </div>
+                            <div class="form-group">
+                                <a href="profile/personal-info.html"><input type="submit" value="تکمیل عضویت" class="btn btn-success"></a>
+                                {% load socialaccount %}
+                                
                             </div>
                         </div>
                     </div>

@@ -6,6 +6,5 @@ app_name = 'root'
 
 urlpatterns = [
     path("",HomeView.as_view(),name="home"),
-    #path("about",about,name="about"),
-    #path("trainer",trainer,name="trainer")
+    path("/personal-info",UserView.as_view(),name="personal-info"),
 ]
