@@ -1,6 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser, AbstractBaseUser,BaseUserManager,PermissionsMixin
-
+from django.contrib.auth.models import AbstractUser,AbstractBaseUser,BaseUserManager,PermissionsMixin
+# Create your models here.
 class CustomeBaseUserManager(BaseUserManager):
     def create_user(self, email, password, **extra_fields):
         if not email:
@@ -20,20 +20,18 @@ class CustomeBaseUserManager(BaseUserManager):
         if extra_fields.get('is_superuser') is not True:
             raise ValueError('Superuser must have is_superuser=True.')
         return self.create_user(email, password, **extra_fields)
-    
 
 
-class CustomeUser(AbstractBaseUser, PermissionsMixin):
+
+class CustomeUser(AbstractBaseUser,PermissionsMixin):
     email = models.EmailField(unique=True)
-    username  = models.CharField(max_length=100, unique=True)
     is_staff = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)
-    is_verified = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
-    
-
+    is_seller=models.BooleanField(default=False)
+    is_verified = models.BooleanField(default=False)
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
@@ -50,13 +48,17 @@ class Profile(models.Model):
     image = models.ImageField(upload_to='users', default='user.jpg')
     phone = models.CharField(max_length=20,null=True, blank=True)
     address = models.CharField(max_length=100,null=True, blank=True)
-    zipcode = models.CharField(max_length=100,null=True)
 
 
     def __str__(self):
         return self.user.email
-    
 
-class SavedPost(models.Model):
-    user = models.ForeignKey(CustomeUser, on_delete=models.CASCADE)
-    #favourite=models.ManyToManyField(Product)
+
+
+
+
+
+
+
+
+

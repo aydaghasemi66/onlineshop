@@ -42,7 +42,6 @@
                 <div class="col-12 col-md-4">
                     {% if request.user.is_authenticated %}
                     خوش اومدی! {{request.user.name}}
-                    <a href={% url 'password_change' %}>تغییر رمزعبور</a>
                     <div class="col-12 col-md-5 col-lg-6">
                         <a href="./cart.html">
                             <div class="btn btn-warning w-100"><i class="fa fa-shopping-cart"></i>&nbsp;<span class="d-md-none d-lg-inline-block">سبد خرید</span> (2)</div>
@@ -52,10 +51,10 @@
                     <div class="row">
                         <div class="col-12 col-md-7 col-lg-6 text-center" id="btn-login-register">
                             <a href="{% url 'accounts:login' %}">ورود</a> /
-
                             <a href="{% url 'accounts:signup' %}">عضویت</a>
-                            
                         </div>
+                    </div>
+                    
                         {% endif %}
 
 

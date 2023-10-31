@@ -13,14 +13,14 @@ class CustomeUserAdmin(UserAdmin):
     ordering = ('email',)
 
     fieldsets = (
-        ('Basic data', {'fields': ('email','username', 'password')}),
+        ('Basic data', {'fields': ('email', 'password')}),
         ('Permissions', {'fields': ('is_staff', 'is_active', 'is_superuser', 'is_verified', 'groups', 'user_permissions')}),
     )
 
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'username', 'password1', 'password2')
+            'fields': ('email', 'password1', 'password2')
         }),
         )
     

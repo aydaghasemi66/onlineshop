@@ -39,9 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'root',
     'accounts',
-    'blog',
+    'blogs',
     'stores',
-    'captcha',
     #django-allauth
     'allauth',
     'allauth.account',
